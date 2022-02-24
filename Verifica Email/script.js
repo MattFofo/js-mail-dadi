@@ -20,9 +20,8 @@ const btnLogIn = document.querySelector(".btn-log-in");
 
 // ciclo per confrontare email utente con quelle presenti nella lista email autorizzate
 
- btnLogIn.addEventListener('click', function() {
-    
-       
+btnLogIn.addEventListener('click', function() {
+    let userEmail = document.querySelector("#user-email").value;
     let found = false;
 
     for (let i = 0; i < arrAutorizedEmailList.length; i++) {
@@ -40,7 +39,7 @@ const btnLogIn = document.querySelector(".btn-log-in");
     }
 
     console.log(userEmail);
- } )
+})
 
 
 
