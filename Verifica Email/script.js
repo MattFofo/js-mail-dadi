@@ -7,51 +7,41 @@
 
 // VARIABILI GLOBALI
 
-const userEmail = prompt('Inserisci la tua Email'); //input utente
+let userEmail = document.querySelector("#user-email").innerHTML; //ERRORE
+console.log(userEmail);
+// let userEmail = userEmailBox.innerHTML;
 
 const arrAutorizedEmailList = ['esempio1@mail.it', 'esempio2@mail.it', 'esempio3@mail.it', 'esempio4@mail.it', 'esempio5@mail.it', 'esempio6@mail.it', 'esempio7@mail.it', 'esempio8@mail.it', 'esempio9@mail.it', 'esempio10@mail.it', 'esempio11@mail.it', 'esempio12@mail.it']; //lista email autorizzate
 
 console.log('lista mail autorizzate', arrAutorizedEmailList);
 
 
+const btnLogIn = document.querySelector(".btn-log-in");
 
 
 // ciclo per confrontare email utente con quelle presenti nella lista email autorizzate
 
-for (let i = 0; i < arrAutorizedEmailList.length; i++) {
+ btnLogIn.addEventListener('click', function() {
+    
+    let userEmail = document.querySelector("#user-email").innerHTML; //ERRORE   
+    let found = false;
 
-    //funzione che confronta le email 
-
-    if (arrAutorizedEmailList[i] == userEmail) {
-        console.log('access granted');
-        break;
-
+    for (let i = 0; i < arrAutorizedEmailList.length; i++) {
+   
+        if (arrAutorizedEmailList[i] == userEmail) {
+            found = true;
+        }
+    }
+   
+    if (found == false) {
+        console.log('denied');
+       
     }else {
-        console.log('access denied');
-        break;
+        console.log('granted');
     }
 
-
-}
-
-
-
-// ALTRO METODO
+    console.log(userEmail);
+ } )
 
 
 
-// let found = false;
-
-// for (let i = 0; i < arrAutorizedEmailList.length; i++) {
-
-//     if (arrAutorizedEmailList[i] == userEmail) {
-//         found = true;
-//     }
-// }
-
-// if (found == false) {
-//     console.log('denied');
-    
-// }else {
-//     console.log('granted');
-// }
