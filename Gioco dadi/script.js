@@ -12,8 +12,24 @@ console.log(arrDieFaces.length);
 
 
 // funzione per selezionare un valore casuale dell'arrey
+// console.log(Math.floor(Math.random() * arrDieFaces.length) + 1);
 
-console.log(Math.floor(Math.random() * arrDieFaces.length) + 1);
+
+let numberPlayer = (Math.floor(Math.random() * arrDieFaces.length) + 1);
+let numberPC = (Math.floor(Math.random() * arrDieFaces.length) + 1);
+
+console.log('numero giocatore', numberPlayer);
+console.log('numero PC', numberPC);
 
 
-let casualNumber = (Math.floor(Math.random() * arrDieFaces.length) + 1);
+if (numberPlayer > numberPC) {
+    console.log('Hai Vinto');
+    
+}else if (numberPlayer == numberPC) {
+    console.log('pareggio');
+
+}else {
+    console.log('Hai diversamente vinto');
+}
+
+
