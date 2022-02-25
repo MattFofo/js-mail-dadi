@@ -31,12 +31,13 @@ btnLogIn.addEventListener('click', function() {
         }
     }
    
-    if (found == false) {
-        output.innerHTML = 'Access Denied';
+    if (found) {
+        output.innerHTML = 'Access Granted';
+        
         
        
     }else {
-        output.innerHTML = 'Access Granted';
+        output.innerHTML = 'Access Denied';
     }
 
 })
